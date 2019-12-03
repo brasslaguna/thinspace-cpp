@@ -127,7 +127,7 @@ bool Framebuffer::Attach(std::string name, GLenum renderbuffer_target, GLenum at
 
 				Bind();
 
-				glFramebufferTexture(
+				glFramebufferTexture2D(
 
 					GL_FRAMEBUFFER,
 					attachment,
