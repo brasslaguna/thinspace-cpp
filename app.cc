@@ -1,6 +1,5 @@
 
 #include "app.h"
-#include <iostream>
 
 #include "plane/plane.h"
 
@@ -19,9 +18,9 @@ namespace thinspace {
 		auto scene_main = base_->Create((gl::SceneConfig) {
 
 			.name = "main",
+			.clear_color = glm::vec3(1.0f, 0.55f, 0.67f),
 			.width = width,
-			.height = height,
-			.clear_color = glm::vec3(1.0f, 0.55f, 0.67f)
+			.height = height
 
 		});
 
@@ -49,16 +48,16 @@ namespace thinspace {
 		base_->Create((gl::ShaderConfig) {
 
 			.name = "dot_fragment",
-			.type = GL_FRAGMENT_SHADER,
-			.file_path = root_dir_ + "/shader/dot/fragment.glsl"
+			.file_path = root_dir_ + "/shader/dot/fragment.glsl",
+			.type = GL_FRAGMENT_SHADER
 
 		});
 
 		base_->Create((gl::ShaderConfig) {
 
 			.name = "dot_vertex",
-			.type = GL_VERTEX_SHADER,
-			.file_path = root_dir_ + "/shader/dot/vertex.glsl"
+			.file_path = root_dir_ + "/shader/dot/vertex.glsl",
+			.type = GL_VERTEX_SHADER
 
 		});
 
@@ -79,9 +78,12 @@ namespace thinspace {
 
 					.texture_config = {
 
+						.name = "",
 						.target = GL_TEXTURE_2D,
-						.format = GL_RGBA,
 						.internal_format = GL_RGBA,
+						.format = GL_RGBA,
+						.width = width,
+						.height = height,
 						.pixel_type = GL_UNSIGNED_BYTE,
 
 						.parametersi = (gl::TextureParametersi) {
@@ -171,9 +173,10 @@ namespace thinspace {
 
 		});
 
-		base_->views_ = {
+		base_->views_ = (std::vector<RenderViewConfig>) {
 
-			{
+			(glhelper::RenderViewConfig) {
+
 				.texture = std::static_pointer_cast<gl::Texture>(
 
 					scene_main->framebuffer_->Get("color", GL_TEXTURE_2D)

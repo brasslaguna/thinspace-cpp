@@ -67,10 +67,12 @@ gl::MeshPtr Create(
 
 			vertex_buffer->InitData(
 				(gl::BufferConfig) {
-					.usage = GL_STATIC_DRAW,
-					.bytes = (GLsizeiptr)(sizeof(float) * vertices.size()),
+					
+					.data = &vertices[0],
 					.size = (GLsizei)(vertices.size()),
-					.data = &vertices[0]
+					.usage = GL_STATIC_DRAW,
+					.bytes = (GLsizeiptr)(sizeof(float) * vertices.size())
+					
 				}
 			);
 
@@ -80,10 +82,12 @@ gl::MeshPtr Create(
 
 			index_buffer->InitData(
 				(gl::BufferConfig) {
-					.usage = GL_STATIC_DRAW,
-					.bytes = (GLsizeiptr)(sizeof(int) * indices.size()),
+					
+					.data = &indices[0],
 					.size = (GLsizei)(indices.size()),
-					.data = &indices[0]
+					.usage = GL_STATIC_DRAW,
+					.bytes = (GLsizeiptr)(sizeof(int) * indices.size())
+					
 				}
 			);
 

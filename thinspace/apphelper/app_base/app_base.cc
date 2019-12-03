@@ -30,8 +30,8 @@ AppBase::AppBase(std::string root_dir) {
 		(gl::ShaderConfig) {
 
 			.name = "view_fragment",
-			.type = GL_FRAGMENT_SHADER,
-			.file_path = root_dir + "/shader/view/fragment.glsl"
+			.file_path = root_dir + "/shader/view/fragment.glsl",
+			.type = GL_FRAGMENT_SHADER
 
 		}
 
@@ -42,8 +42,8 @@ AppBase::AppBase(std::string root_dir) {
 		(gl::ShaderConfig) {
 
 			.name = "view_vertex",
-			.type = GL_VERTEX_SHADER,
-			.file_path = root_dir + "/shader/view/vertex.glsl"
+			.file_path = root_dir + "/shader/view/vertex.glsl",
+			.type = GL_VERTEX_SHADER
 
 		}
 

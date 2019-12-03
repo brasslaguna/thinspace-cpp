@@ -2,7 +2,7 @@
 #ifndef APP_APP_H_
 #define APP_APP_H_
 
-#include <iostream>
+#define GLM_ENABLE_EXPERIMENTAL
 
 #include "app_base/app_base.h"
 

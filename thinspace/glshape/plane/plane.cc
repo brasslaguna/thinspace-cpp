@@ -124,10 +124,12 @@ gl::MeshPtr Create(
 
 				vertex->InitData(
 					(gl::BufferConfig) {
-						.usage = GL_STATIC_DRAW,
+
+						.data = vertices,
 						.size = resolution_x * resolution_y,
 						.bytes = (GLsizeiptr)(sizeof(vertices)),
-						.data = vertices
+						.usage = GL_STATIC_DRAW
+						
 					}
 				);
 
@@ -139,10 +141,12 @@ gl::MeshPtr Create(
 
 				index->InitData(
 					(gl::BufferConfig) {
-						.usage = GL_STATIC_DRAW,
+						
+						.data = indices,
 						.size = (resolution_x - 1) * (resolution_y - 1) * 6,
 						.bytes = (GLsizeiptr)(sizeof(indices)),
-						.data = indices
+						.usage = GL_STATIC_DRAW
+						
 					}
 				);
 
