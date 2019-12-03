@@ -20,8 +20,8 @@ namespace apphelper {
 
 typedef struct {
 
-	glm::mat4 transformation;
 	gl::TexturePtr texture;
+	glm::mat4 transformation;
 
 } RenderViewConfig;
 
