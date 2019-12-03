@@ -10,8 +10,12 @@
 	#include <OpenGl/gl3.h>
 
 #else
-	
-	#include <GL/gl.h>
+
+	#define GLM_ENABLE_EXPERIMENTAL
+
+	#include <EGL/egl.h>
+	#include <GLES3/gl3.h>
+
 
 #endif
 

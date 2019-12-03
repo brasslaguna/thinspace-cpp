@@ -1,5 +1,5 @@
 
-#include "app/app.h"
+#include "app.h"
 #include "drm_context/drm_context.h"
 
 int main(int argc, char** argv) {
