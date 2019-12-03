@@ -2,6 +2,8 @@
 #ifndef GL_LIGHT_H_
 #define GL_LIGHT_H_
 
+#define GLM_ENABLE_EXPERIMENTAL
+
 #include <memory>
 #include <vector>
 

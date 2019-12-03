@@ -173,9 +173,9 @@ namespace thinspace {
 
 		});
 
-		base_->views_ = (std::vector<RenderViewConfig>) {
+		base_->views_ = (std::vector<apphelper::RenderViewConfig>) {
 
-			(glhelper::RenderViewConfig) {
+			(apphelper::RenderViewConfig) {
 
 				.texture = std::static_pointer_cast<gl::Texture>(
 

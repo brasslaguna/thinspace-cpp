@@ -1,4 +1,6 @@
 
+#ifdef INCLUDE_GL_MAC
+
 #ifndef CONTEXT_GLFW_CONTEXT_H_
 #define CONTEXT_GLFW_CONTEXT_H_
 
@@ -26,3 +28,5 @@ class GLFWContext {
 }
 
 #endif // CONTEXT_GLFW_CONTEXT_H_
+
+#endif // INCLUDE_GL_MAC

@@ -2,8 +2,6 @@
 #ifndef APP_APP_H_
 #define APP_APP_H_
 
-#define GLM_ENABLE_EXPERIMENTAL
-
 #include "app_base/app_base.h"
 
 namespace thinspace {

@@ -60,8 +60,8 @@ gl::MeshPtr Create(
 					
 					.data = &vertices[0],
 					.size = (GLsizei)(vertices.size()),
-					.usage = GL_STATIC_DRAW,
-					.bytes = (GLsizeiptr)(sizeof(float) * vertices.size())
+					.bytes = (GLsizeiptr)(sizeof(float) * vertices.size()),
+					.usage = GL_STATIC_DRAW
 					
 				}
 			);
@@ -75,8 +75,8 @@ gl::MeshPtr Create(
 
 					.data = &indices[0],
 					.size = (GLsizei)(indices.size()),
-					.usage = GL_STATIC_DRAW,
-					.bytes = (GLsizeiptr)(sizeof(int) * indices.size())
+					.bytes = (GLsizeiptr)(sizeof(int) * indices.size()),
+					.usage = GL_STATIC_DRAW
 					
 				}
 			);

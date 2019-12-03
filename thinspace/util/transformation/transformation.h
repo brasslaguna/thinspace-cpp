@@ -2,6 +2,8 @@
 #ifndef GL_TRANSFORMATION_H_
 #define GL_TRANSFORMATION_H_
 
+#define GLM_ENABLE_EXPERIMENTAL
+
 #include <glm/gtx/transform.hpp>
 #include <glm/gtc/quaternion.hpp>
 
