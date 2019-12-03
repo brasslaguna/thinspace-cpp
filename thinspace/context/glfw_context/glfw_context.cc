@@ -1,4 +1,6 @@
 
+#ifdef INCLUDE_GL_MAC
+
 #include "glfw_context.h"
 
 namespace context {
@@ -66,3 +68,5 @@ void GLFWContext::size(int* size) const {
 }
 
 } // namespace context
+
+#endif // INCLUDE_GL_MAC
