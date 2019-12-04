@@ -1,5 +1,7 @@
 
-#version 410
+#version 300 es
+
+precision highp float;
 
 layout (location = 0) in vec3 position;
 layout (location = 2) in vec2 texture;

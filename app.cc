@@ -34,7 +34,7 @@ namespace thinspace {
 
 		);
 
-		plane_model->transformation_.scale_ = glm::vec3(0.5, 0.5, 0.5);
+		plane_model->transformation_.scale_ = glm::vec3(0.3f, 0.3f, 0.3f);
 
 		plane_model->meshes_.insert(
 

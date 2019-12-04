@@ -13,7 +13,7 @@ class Transformation {
 
 	public:
 
-		glm::vec3 translation_, rotation_, scale_ = glm::vec3(1.0f, 1.0f, 1.0f);
+		glm::vec3 translation_ = glm::vec3(0.0f, 0.0f, 0.0f), rotation_ = glm::vec3(0.0f, 0.0f, 0.0f), scale_ = glm::vec3(1.0f, 1.0f, 1.0f);
 
 		glm::mat4 Matrix(void) const;
 		glm::mat4 CalculateRotation(void) const;

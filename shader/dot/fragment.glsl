@@ -1,5 +1,7 @@
 
-#version 410
+#version 300 es
+
+precision highp float;
 
 in vec2 texture_;
 
@@ -12,8 +14,8 @@ void main() {
 
 	vec4 color = vec4(0.5, 0.7, 1.0, 1.0);
 
-	int total = 5;
-	float diameter = 0.45f;
+	int total = 15;
+	float diameter = 0.35f;
 
 	vec2 center = vec2(0.5f);
 

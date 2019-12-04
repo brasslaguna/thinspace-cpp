@@ -58,7 +58,7 @@ static const EGLint context_attribs[] = {
 struct gbm_bo *bo;	
 uint32_t handle;
 uint32_t pitch;
-int32_t fb;
+uint32_t fb;
 uint64_t modifier;
 
 static drmModeConnector *FindConnector (drmModeRes *resources) {
@@ -307,7 +307,7 @@ void DRMContext::Init(void) {
 
 	eglBindAPI (EGL_OPENGL_API);
 	eglGetConfigs(display, NULL, 0, &count);
-	configs = malloc(count * sizeof *configs);
+	configs = (void**)malloc(count * sizeof *configs);
 
 	eglChooseConfig (
 

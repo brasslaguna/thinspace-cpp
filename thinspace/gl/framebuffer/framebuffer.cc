@@ -3,7 +3,7 @@
 
 namespace gl {
 
-GLenum Framebuffer::Status(void) {
+GLenum Framebuffer::Statu(void) {
 
 	Bind();
 
@@ -131,6 +131,7 @@ bool Framebuffer::Attach(std::string name, GLenum renderbuffer_target, GLenum at
 
 					GL_FRAMEBUFFER,
 					attachment,
+					GL_TEXTURE_2D,
 					item->second->Id(),
 					0
 
@@ -142,7 +143,7 @@ bool Framebuffer::Attach(std::string name, GLenum renderbuffer_target, GLenum at
 
 	}
 
-	return Status() == GL_FRAMEBUFFER_COMPLETE;
+	return Statu() == GL_FRAMEBUFFER_COMPLETE;
 
 }
 
