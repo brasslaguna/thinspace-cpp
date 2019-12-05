@@ -1,4 +1,6 @@
 
+#ifdef INCLUDE_GL_PI_4
+
 #ifndef CONTEXT_DRM_CONTEXT_H_
 #define CONTEXT_DRM_CONTEXT_H_
 
@@ -16,3 +18,5 @@ class DRMContext {
 } // namespace context
 
 #endif // CONTEXT_DRM_CONTEXT_H_
+
+#endif // INCLUDE_GL_PI_4

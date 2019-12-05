@@ -24,7 +24,7 @@ FLAG_DEBUG = -g
 FLAG_GLFW = -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo
 FLAG_APPLE = -framework Foundation -framework AVFoundation -framework CoreMedia -framework AppKit -framework QuartzCore
 FLAG_IMAGE = -lfreeimage
-FLAG_VAR = -DINCLUDE_GL_MAC
+FLAG_VAR = -DINCLUDE_GL_MAC -DDEFINE_GLSL_VERSION='"410"'
 
 OBJ = $(OBJ_MAIN) $(OBJ_APP) $(OBJ_APPHELPER) $(OBJ_GL) $(OBJ_GLHELPER) $(OBJ_GLSHAPE) $(OBJ_UTIL) $(OBJ_COMPONENT) $(OBJ_CONTEXT)
 FLAG = $(FLAG_VAR) $(FLAG_INCLUDE) $(FLAG_GLFW) $(FLAG_APPLE) $(FLAG_IMAGE) 

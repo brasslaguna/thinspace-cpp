@@ -1,4 +1,6 @@
 
+#ifdef INCLUDE_GL_PI_4
+
 #include "drm_context.h"
 
 #include <xf86drm.h>
@@ -351,3 +353,5 @@ void DRMContext::Init(void) {
 
 
 } // namespace context
+
+#endif // INCLUDE_GL_PI_4

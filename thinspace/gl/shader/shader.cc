@@ -31,7 +31,9 @@ bool Shader::load_file(const std::string& file_path) {
 
 	id_ = glCreateShader(type);
 
-	const GLchar* buffer = file.c_str();
+	std::string version = "#version " + std::string(DEFINE_GLSL_VERSION) + "\n";
+
+	const GLchar* buffer = std::string(version + file).c_str();
 
 	glShaderSource(id_, 1, &buffer, NULL);
 	glCompileShader(id_);
