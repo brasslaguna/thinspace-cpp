@@ -46,7 +46,7 @@ class Framebuffer {
 		void CreateBuffer(TextureConfig config);
 		std::shared_ptr<void> Get(std::string name, GLenum renderbuffer_target);
 		void Bind(void);
-		GLenum Statu(void);
+		GLenum GetStatus(void);
 		GLuint Id(void) const;
 		GLenum Attachment(void) const;
 

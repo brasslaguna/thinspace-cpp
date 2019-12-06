@@ -1,9 +1,5 @@
 
-#version 300 es
-
 precision highp float;
-
-in vec2 texture_;
 
 out vec4 frag_color;
 

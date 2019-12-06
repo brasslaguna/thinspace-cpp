@@ -1,9 +1,4 @@
 
-#version 300 es
-
-precision highp float;
-precision highp sampler2D;
-
 in vec2 texture_;
 
 out vec4 color;
@@ -11,5 +6,7 @@ out vec4 color;
 uniform sampler2D texture_sample;
 
 void main() {
+
 	color = texture(texture_sample, texture_);
+
 }

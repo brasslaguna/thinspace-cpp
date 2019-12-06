@@ -34,7 +34,7 @@ namespace thinspace {
 
 		);
 
-		plane_model->transformation_.scale_ = glm::vec3(0.3f, 0.3f, 0.3f);
+		plane_model->transformation_.scale_ = glm::vec3(0.5f, 0.5f, 0.5f);
 
 		plane_model->meshes_.insert(
 
@@ -78,12 +78,9 @@ namespace thinspace {
 
 					.texture_config = {
 
-						.name = "",
 						.target = GL_TEXTURE_2D,
 						.internal_format = GL_RGBA,
 						.format = GL_RGBA,
-						.width = width,
-						.height = height,
 						.pixel_type = GL_UNSIGNED_BYTE,
 
 						.parametersi = (gl::TextureParametersi) {

@@ -3,7 +3,7 @@
 
 namespace gl {
 
-GLenum Framebuffer::Statu(void) {
+GLenum Framebuffer::GetStatus(void) {
 
 	Bind();
 
@@ -143,7 +143,7 @@ bool Framebuffer::Attach(std::string name, GLenum renderbuffer_target, GLenum at
 
 	}
 
-	return Statu() == GL_FRAMEBUFFER_COMPLETE;
+	return GetStatus() == GL_FRAMEBUFFER_COMPLETE;
 
 }
 
