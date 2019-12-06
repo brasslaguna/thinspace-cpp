@@ -1,4 +1,6 @@
 
+precision highp float;
+
 in vec2 texture_;
 
 out vec4 color;
