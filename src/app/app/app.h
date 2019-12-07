@@ -17,7 +17,7 @@ class App {
 
 				base_ = apphelper::AppBasePtr(
 
-					new apphelper::AppBase(std::string(root_dir_ + "/src/thinspace"))
+					new apphelper::AppBase(std::string(root_dir_ + "/thinspace/src"))
 
 				);
 
