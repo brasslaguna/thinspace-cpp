@@ -1,5 +1,5 @@
 
-SOURCE = src/thinspace
+SOURCE = thinspace/src
 SOURCE_GLHELPER = $(SOURCE)/glhelper
 SOURCE_GL = $(SOURCE)/gl
 SOURCE_GLSHAPE = $(SOURCE)/glshape
@@ -17,17 +17,16 @@ OBJ_UTIL = $(wildcard $(SOURCE_UTIL)/**/*.cc)
 OBJ_APPHELPER = $(wildcard $(SOURCE_APPHELPER)/**/*.cc)
 OBJ_CONTEXT = $(wildcard $(SOURCE_CONTEXT)/**/*.cc)
 OBJ_APP = app.cc
-OBJ_MAIN = src/main/mac/main.cc
+OBJ_MAIN = thinspace/src/main/pi/main.cc
 
 FLAG_INCLUDE = -I$(SOURCE_GL) -I$(SOURCE_COMPONENT) -I$(SOURCE_UTIL) -I$(SOURCE_APP) -I$(SOURCE_APPHELPER) -I$(SOURCE_GLHELPER) -I$(SOURCE_GLSHAPE) -I$(SOURCE_CONTEXT) -I.
 FLAG_DEBUG = -g
-FLAG_GLFW = -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo
-FLAG_APPLE = -framework Foundation -framework AVFoundation -framework CoreMedia -framework AppKit -framework QuartzCore
+FLAG_PI = -ldrm -lgbm -lEGL -lGL -I/usr/include/libdrm
 FLAG_IMAGE = -lfreeimage
-FLAG_VAR = -DINCLUDE_GL_MAC -DDEFINE_GLSL_VERSION='"410"'
+FLAG_VAR = -DINCLUDE_GL_PI_4 -DDEFINE_GLSL_VERSION='"300 es"'
 
 OBJ = $(OBJ_MAIN) $(OBJ_APP) $(OBJ_APPHELPER) $(OBJ_GL) $(OBJ_GLHELPER) $(OBJ_GLSHAPE) $(OBJ_UTIL) $(OBJ_COMPONENT) $(OBJ_CONTEXT)
-FLAG = $(FLAG_VAR) $(FLAG_INCLUDE) $(FLAG_GLFW) $(FLAG_APPLE) $(FLAG_IMAGE) 
+FLAG = $(FLAG_VAR) $(FLAG_INCLUDE) $(FLAG_PI) $(FLAG_IMAGE) 
 
 O = bin/app
 
