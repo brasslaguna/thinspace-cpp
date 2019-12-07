@@ -123,12 +123,12 @@ void PassPipeline::Run(glm::vec3 clear_color) const {
 			auto program = iteration.program;
 			auto draw = iteration.draw;
 
-			if(program == NULL)
+			if(program != NULL) {
 
-				continue;
+				program->Use();
+				payload.program = program;
 
-			program->Use();
-			payload.program = program;
+			}
 
 			if(draw == NULL)
 				
