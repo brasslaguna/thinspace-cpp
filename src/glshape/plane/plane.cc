@@ -1,13 +1,12 @@
 
 #include "plane.h"
-#include <iostream>
 
 namespace glshape {
 namespace plane {
 
 const int kVertexSize = 14;
 
-static void GenerateQuad(
+void Generate(
 	int resolution_x, 
 	int resolution_y, 
 	float* vertices, 
@@ -110,7 +109,7 @@ gl::MeshPtr Create(
 				float vertices[resolution_x * resolution_y * kVertexSize];
 				int indices[(resolution_x - 1) * (resolution_y - 1) * 6];
 
-				GenerateQuad(
+				Generate(
 					resolution_x, 
 					resolution_y, 
 					vertices, 

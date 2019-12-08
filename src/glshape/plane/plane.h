@@ -8,6 +8,14 @@
 namespace glshape {
 namespace plane {
 
+void Generate(
+	int resolution_x, 
+	int resolution_y, 
+	float* vertices, 
+	int* indices, 
+	const std::function<void (int index, int x, int y, int size, int vertex_size, float* vertices)> callback = 0
+);
+
 gl::MeshPtr Create(
 	
 	int resolution_x, 
