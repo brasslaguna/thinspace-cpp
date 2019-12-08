@@ -17,7 +17,7 @@ OBJ_UTIL = $(wildcard $(SOURCE_UTIL)/**/*.cc)
 OBJ_APPHELPER = $(wildcard $(SOURCE_APPHELPER)/**/*.cc)
 OBJ_CONTEXT = $(wildcard $(SOURCE_CONTEXT)/**/*.cc)
 OBJ_APP = app.cc
-OBJ_MAIN = main.cc
+OBJ_MAIN = main_pi.cc
 OBJ_PROJECT = $(wildcard src/**/*.cc)
 
 FLAG_INCLUDE = -I$(SOURCE_GL) -I$(SOURCE_COMPONENT) -I$(SOURCE_UTIL) -I$(SOURCE_APP) -I$(SOURCE_APPHELPER) -I$(SOURCE_GLHELPER) -I$(SOURCE_GLSHAPE) -I$(SOURCE_CONTEXT) -I.
