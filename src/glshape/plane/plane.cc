@@ -4,8 +4,6 @@
 namespace glshape {
 namespace plane {
 
-const int kVertexSize = 14;
-
 void Generate(
 	int resolution_x, 
 	int resolution_y, 
