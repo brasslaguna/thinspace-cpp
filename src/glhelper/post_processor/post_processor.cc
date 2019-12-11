@@ -102,7 +102,6 @@ void PostProcessor::UpdatePasses(std::vector<PostProcessorPass> passes) {
 		pass.iterations = {
 
 			{
-				.program = item.program,
 				.draw =
 					[
 						item, 

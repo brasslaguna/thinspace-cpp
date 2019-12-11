@@ -120,15 +120,7 @@ void PassPipeline::Run(glm::vec3 clear_color) const {
 
 		for(const auto& iteration : pass.iterations) {
 
-			auto program = iteration.program;
 			auto draw = iteration.draw;
-
-			if(program != NULL) {
-
-				program->Use();
-				payload.program = program;
-
-			}
 
 			if(draw == NULL)
 				

@@ -19,7 +19,6 @@ namespace glhelper {
 typedef struct {
 
 	std::string name;
-	gl::ShaderProgramPtr program;
 	gl::FramebufferPtr framebuffer;
 	GLenum attachment_id;
 
@@ -27,7 +26,6 @@ typedef struct {
 
 typedef struct {
 
-	gl::ShaderProgramPtr program;
 	std::function<void (Payload)> draw;
 
 } ProgramIteration;
