@@ -27,7 +27,6 @@ typedef struct {
 
 typedef struct {
 
-	gl::ShaderProgramPtr program;
 	std::function<void (Payload)> draw;
 
 } ProgramIteration;
