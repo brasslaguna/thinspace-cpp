@@ -51,9 +51,9 @@ typedef struct {
 	glm::mat4 matrix;
 	int total;
 
-} Payload;
+} ParticlesPayload;
 
-typedef std::function<void (Payload)> DrawCallback;
+typedef std::function<void (ParticlesPayload)> DrawCallback;
 
 class Particles {
 

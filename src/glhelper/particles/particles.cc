@@ -165,7 +165,7 @@ void Particles::Update(std::function<void (Particle& particle, int index)> callb
 
 void Particles::Draw(GLenum mode, DrawCallback draw) {
 
-	auto payload = (Payload) {
+	auto payload = (ParticlesPayload) {
 
 		.matrix = transformation_.Matrix(),
 		.total = (int)particles_.size()
