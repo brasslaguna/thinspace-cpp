@@ -1,7 +1,7 @@
 
 #include "particles/particles.h"
 
-namespace karma {
+namespace gl {
 
 void Particles::Init(void) {
 
@@ -155,7 +155,7 @@ void Particles::Update(std::function<void (Particle& particle, int index)> callb
 			.data = (!buffer.size()) ? NULL : &buffer[0]
 
 		}
-		
+
 	);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -182,4 +182,4 @@ void Particles::Draw(GLenum mode, DrawCallback draw) {
 
 }
 
-} // namespace karma
+} // namespace gl
