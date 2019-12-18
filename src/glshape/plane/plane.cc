@@ -40,16 +40,6 @@ void Generate(
 		vertices[index+6] = (float)x / (float)(resolution_x - 1);
 		vertices[index+7] = (float)y / (float)(resolution_y - 1);
 
-		// tangent
-		vertices[index+8] = 0.0f;
-		vertices[index+9] = 0.0f;
-		vertices[index+10] = 0.0f;
-
-		// bitangent
-		vertices[index+11] = 0.0f;
-		vertices[index+12] = 0.0f;
-		vertices[index+13] = 0.0f;
-
 		if(x != resolution_x - 1 && y != resolution_y - 1) {
 
 			indices[indices_index] = resolution_x * y + x;
@@ -158,11 +148,6 @@ gl::MeshPtr Create(
 				glEnableVertexAttribArray(2);
 				glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(float) * kVertexSize, (GLvoid*)(6 * sizeof(float)));
 
-				glEnableVertexAttribArray(3);
-				glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(float) * kVertexSize, (GLvoid*)(8 * sizeof(float)));
-
-				glEnableVertexAttribArray(4);
-				glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(float) * kVertexSize, (GLvoid*)(11 * sizeof(float)));
 			}
 	);
 

@@ -95,15 +95,17 @@ void Particles::Init(void) {
 
 		(gl::BufferConfig) {
 
+			.data = (!buffer.size()) ? NULL : &buffer[0],
+
 			.size = (GLsizei)buffer.size(),
 
 			.bytes = (GLsizeiptr)(
+
 				buffer.size() * sizeof(ParticleBufferArray)
+			
 			),
 
-			.offset = 0,
-
-			.data = (!buffer.size()) ? NULL : &buffer[0]
+			.offset = 0
 
 		}
 
@@ -144,15 +146,15 @@ void Particles::Update(std::function<void (Particle& particle, int index)> callb
 
 		(gl::BufferConfig) {
 
+			.data = (!buffer.size()) ? NULL : &buffer[0],
+
 			.size = (GLsizei)buffer.size(),
 
 			.bytes = (GLsizeiptr)(
 				buffer.size() * sizeof(ParticleBufferArray)
 			),
 
-			.offset = 0,
-
-			.data = (!buffer.size()) ? NULL : &buffer[0]
+			.offset = 0
 
 		}
 
